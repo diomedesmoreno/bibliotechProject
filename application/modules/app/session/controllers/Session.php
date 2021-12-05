@@ -31,8 +31,6 @@ class Session extends MY_Controller
 		$password   = ($password == FALSE) ? $this->input->post('password') : $password;
 		$redirect   = (empty($_POST['redirect'])) ? 'dashboard' : $this->input->post('redirect');
 		$row        = $this->com_auth->auth($domain, $username, $password);
-		echo var_dump($row);
-		die();
 
 		if($row[0] == TRUE)
 		{
