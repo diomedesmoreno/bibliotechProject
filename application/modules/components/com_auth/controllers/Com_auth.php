@@ -85,7 +85,8 @@ class Com_auth extends MY_Controller
 
 	private function get_user_data($row)
 	{
-		print_d($row);
+		echo var_dump($row);
+		die();
 		return array(
 			'is_logged_in'      => 1,
 			'menu_type'			=> "expanded",
