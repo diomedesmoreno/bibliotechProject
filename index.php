@@ -54,12 +54,14 @@ date_default_timezone_set('America/Santo_Domingo');
  * NOTE: If you change these, also change the error_reporting() code below
  */
 	//define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
-switch($_SERVER["HTTP_HOST"]){
-	case "localhost:8080":
+	switch($_SERVER["HTTP_HOST"]){
+		case "localhost:8080":
 		define('ENVIRONMENT', 'development');
 		break;
 	default:
 		define('ENVIRONMENT', 'production');
+		echo ($_SERVER["HTTP_HOST"]);
+			die();
 		break;
 }
 
