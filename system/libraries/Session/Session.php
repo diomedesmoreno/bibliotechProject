@@ -767,6 +767,8 @@ class CI_Session {
 				$userdata[$key] = $_SESSION[$key];
 			}
 		}
+		var_dump($userdata,' vamos al juego 3.0');
+			die();
 
 		return $userdata;
 	}

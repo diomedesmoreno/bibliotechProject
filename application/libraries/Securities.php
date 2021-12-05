@@ -11,8 +11,6 @@ class Securities
 
 	public function is_logged_in($is_logged_in)
 	{
-		var_dump($is_logged_in,' vamos al juego');
-			die();
 		if(!isset($is_logged_in) || $is_logged_in != 1)
 		{
 			$redirect = $this->CI->uri->segment(1);
