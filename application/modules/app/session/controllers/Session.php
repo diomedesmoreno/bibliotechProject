@@ -166,6 +166,8 @@ class Session extends MY_Controller
 
 	private function redirect_if_logged_in($is_logged_in)
 	{
+		var_dump($is_logged_in,' vamos al juego');
+		die();
 		if(isset($is_logged_in) || ($is_logged_in === TRUE))
 		{
 			$redirect = "dashboard";
