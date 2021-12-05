@@ -60,8 +60,6 @@ switch($_SERVER["HTTP_HOST"]){
 		break;
 	default:
 		define('ENVIRONMENT', 'production');
-		echo ($_SERVER["HTTP_HOST"]);
-			die();
 		break;
 }
 
