@@ -148,7 +148,7 @@ class Ad_session extends MY_Controller
 	{
 		if(isset($is_logged_in) || ($is_logged_in === TRUE))
 		{
-			var_dump('1- ',$data);
+			var_dump('1- ',$is_logged_in);
 			die();
 			$redirect = "admin/dashboard";
 			redirect(base_url().$redirect);
