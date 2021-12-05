@@ -168,6 +168,8 @@ class Session extends MY_Controller
 	{
 		if(isset($is_logged_in) || ($is_logged_in === TRUE))
 		{
+			echo var_dump($is_logged_in);
+			die();
 			$redirect = "dashboard";
 			redirect(base_url().$redirect);
 		}
