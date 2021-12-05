@@ -50,10 +50,10 @@ if( ! function_exists('generate_code'))
 		$key 		= '';
 		$pattern 	= '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		$max 		= strlen($pattern)-1;
-		// for($i=0;$i < $long;$i++){
+		for($i=0;$i < $long;$i++){
 		// 	$key .= $pattern{mt_rand(0,$max)};
-		// 	echo"hola";die();
-		// } 
+			$key .= $pattern[mt_rand(0,$max)];
+		} 
 			
 		return $pattern;
 	}
