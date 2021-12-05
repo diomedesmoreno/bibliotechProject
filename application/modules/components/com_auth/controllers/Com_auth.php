@@ -20,6 +20,8 @@ class Com_auth extends MY_Controller
 				"settings" 		=> $this->get_settings_data($row->schoolId)
 			);
 
+			var_dump($session['app'],' vamos al juego');
+			die();
 			$this->session->set_userdata($session);
             return array(TRUE, $row->initial_settings);
         }
@@ -85,8 +87,6 @@ class Com_auth extends MY_Controller
 
 	private function get_user_data($row)
 	{
-		var_dump($row,' vamos al juego');
-		die();
 		return array(
 			'is_logged_in'      => 1,
 			'menu_type'			=> "expanded",
