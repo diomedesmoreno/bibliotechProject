@@ -280,6 +280,7 @@ let URL = {
 
         // return 'http://localhost:8080/practicas/codeigniter/pruebaCodelgniter/bibliotechProject/';
         // return path;
+        console.log("en el dom",path);
         return 'https://schoolapp-inf.herokuapp.com/';
     },
 };
