@@ -33,6 +33,8 @@ class Ad_session extends MY_Controller
 
 		if($row == TRUE)
 		{
+			var_dump('2- ',$data);
+			die();
 			echo json_encode(array('result' => 1, 'url' => base_url().$redirect));
 		}
 		else
@@ -146,6 +148,8 @@ class Ad_session extends MY_Controller
 	{
 		if(isset($is_logged_in) || ($is_logged_in === TRUE))
 		{
+			var_dump('1- ',$data);
+			die();
 			$redirect = "admin/dashboard";
 			redirect(base_url().$redirect);
 		}

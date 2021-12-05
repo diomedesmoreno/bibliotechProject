@@ -19,8 +19,6 @@ class Dashboard extends APP_Controller
 		$data                   = array();
 		$data['header_data']	= $this->load_header_data();
 		$data['content']		= 'dashboard/dashboard_view';
-		var_dump($data);
-		die();
 		$this->load->view('include/template', $data);
 	}
 
