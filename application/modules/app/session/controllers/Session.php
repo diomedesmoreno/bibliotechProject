@@ -12,13 +12,12 @@ class Session extends MY_Controller
 
 	public function index($redirect = FALSE)
 	{
+		var_dump(' vamos al juego 4.0',$this->session->userdata('app')['userdata']['schoolId'] ,$this->session->userdata('app')['userdata'] );
+		die();
 		$this->redirect_if_logged_in($this->session->userdata('app')['userdata']['is_logged_in']);
 		$data                   = array();
 		$data['redirect']       = ($redirect == FALSE) ? "" : $redirect;
 		if ($this->session->userdata('app')['userdata']['schoolId']  == 1){
-			var_dump(' vamos al juego 4.0',$this->session->userdata('app')['userdata'] );
-				die();
-
 		}
 		$this->load->view('session/session_view', $data);
 		// 
@@ -172,7 +171,7 @@ class Session extends MY_Controller
 
 	private function redirect_if_logged_in($is_logged_in)
 	{
-		// var_dump(' vamos al juego 3.0',$is_logged_in );
+		// var_dump(' vamos al juego 4.0',$is_logged_in );
 		// 	die();
 		if(isset($is_logged_in) || ($is_logged_in === TRUE))
 		{
