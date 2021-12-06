@@ -16,8 +16,8 @@ class Session extends MY_Controller
 		$data                   = array();
 		$data['redirect']       = ($redirect == FALSE) ? "" : $redirect;
 		if ($this->session->userdata('app')['userdata']['schoolId']  == 1){
-			var_dump(' vamos al juego 4.0',$this->session->userdata('app')['userdata'] );
-				die();
+			// var_dump(' vamos al juego 4.0',$this->session->userdata('app')['userdata'] );
+			// die();
 		}
 		$this->load->view('session/session_view', $data);
 		// 
