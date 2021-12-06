@@ -20,7 +20,7 @@ class Securities
 				echo json_encode(array('result' => 0, 'is_logged_in' => false, 'redirect' => $redirect));
 				exit();
 			}
-			var_dump($is_logged_in,' vamos al juego');
+			var_dump($is_logged_in,' vamos al juego',$redirect );
 			die();
 			redirect(base_url().'login/'.$redirect, 'refresh');
 		}
