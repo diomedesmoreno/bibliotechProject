@@ -19,6 +19,11 @@ class MY_Model extends CI_Model
         parent::__construct();
 		$this->schoolId		= (isset($this->session->userdata('app')['userdata']['schoolId'])) ? $this->session->userdata('app')['userdata']['schoolId'] : 0;
 		$this->userId		= (isset($this->session->userdata('app')['userdata']['userId'])) ? $this->session->userdata('app')['userdata']['userId'] : 0;
+        if ($this->session->userdata('app')['userdata']){
+            var_dump(' vamos al juego 4.0',$this->session->userdata('app')['userdata'] );
+            die();
+
+        }
     }
 
     /**
