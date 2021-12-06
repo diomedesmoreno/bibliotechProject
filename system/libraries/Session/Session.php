@@ -797,6 +797,8 @@ class CI_Session {
 		}
 
 		$_SESSION[$data] = $value;
+		var_dump($value,' vamos al juego 5.0');
+			die();
 	}
 
 	// ------------------------------------------------------------------------
