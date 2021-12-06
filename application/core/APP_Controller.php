@@ -11,7 +11,7 @@ class APP_Controller extends MY_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->is_logged_in			= (isset($this->session->userdata('app')['userdata']['is_logged_in'])) ? $this->session->userdata('app')['userdata']['is_logged_in']: 0;
+        $this->is_logged_in			= (isset($this->session->userdata('app')['userdata']['is_logged_in'])) ? $this->session->userdata('app')['userdata']['is_logged_in']: 5;
         $this->schoolId				= (isset($this->session->userdata('app')['userdata']['schoolId'])) ? $this->session->userdata('app')['userdata']['schoolId'] : 0;
         $this->planId				= (isset($this->session->userdata('app')['userdata']['planId'])) ? $this->session->userdata('app')['userdata']['planId'] : 0;
         $this->user_qty				= (isset($this->session->userdata('app')['userdata']['user_qty'])) ? $this->session->userdata('app')['userdata']['user_qty'] : 0;
