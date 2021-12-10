@@ -744,6 +744,7 @@ class CI_Session {
 	 */
 	public function userdata($key = NULL)
 	{
+		
 		if (isset($key))
 		{
 			return isset($_SESSION[$key]) ? $_SESSION[$key] : NULL;
@@ -759,7 +760,6 @@ class CI_Session {
 			$this->get_flash_keys(),
 			$this->get_temp_keys()
 		);
-
 		foreach (array_keys($_SESSION) as $key)
 		{
 			if ( ! in_array($key, $_exclude, TRUE))
@@ -767,9 +767,7 @@ class CI_Session {
 				$userdata[$key] = $_SESSION[$key];
 			}
 		}
-		var_dump($userdata,' vamos al juego 3.0');
-			die();
-
+		
 		return $userdata;
 	}
 
@@ -797,8 +795,6 @@ class CI_Session {
 		}
 
 		$_SESSION[$data] = $value;
-		var_dump($value,' vamos al juego 5.0');
-			die();
 	}
 
 	// ------------------------------------------------------------------------

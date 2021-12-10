@@ -19,10 +19,6 @@ class Com_auth extends MY_Controller
 				"userdata" 		=> $this->get_user_data($row),
 				"settings" 		=> $this->get_settings_data($row->schoolId)
 			);
-			// if ($session['app']['userdata']['schoolId'] == 1){
-				var_dump(' 1- vamos al juego 3.0',$session['app']['userdata']['is_logged_in'],$session['app'] );
-				die();
-			// }
 			$this->session->set_userdata($session);
             return array(TRUE, $row->initial_settings);
         }

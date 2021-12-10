@@ -2,20 +2,21 @@
 	<div class="pcoded-inner-content">
 		<div class="main-body">
 			<div class="page-wrapper">
-				<div class="page-header">
+				<div class="page-header row">
 					<div class="page-header-title">
 						<h4>Lista de Facturas</h4>
-					</div>
-					<div class="page-header-breadcrumb">
-						<ul class="breadcrumb">
-							<li class="breadcrumb-item">
-								<a href="<?php echo base_url('dashboard');?>">
-									<i class="icofont icofont-home"></i>
-								</a>
-							</li>
-							<li class="breadcrumb-item"><a href="javascript:void(0);">Generales</a></li>
-							<li class="breadcrumb-item active"><a href="javascript:void(0);">Alumnos</a></li>
-						</ul>
+						<div >
+							<ul class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="<?php echo base_url('dashboard');?>">
+										<i class="icofont icofont-home"></i>
+									</a>
+								</li>
+								<!-- <li class="breadcrumb-item"><a href="javascript:void(0);">Generales</a></li> -->
+								<li class="breadcrumb-item active"><a href="javascript:void(0);">Reportes</a></li>
+								<li class="breadcrumb-item active"><a href="javascript:void(0);">Lista de Facturas</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<div class="page-body">
@@ -23,13 +24,13 @@
 						<div class="col-md-6 col-xl-3">
 							<div class="card client-blocks dark-primary-border">
 								<div class="card-body">
-									<h5>New Documents</h5>
+									<h5>Pagadas</h5>
 									<ul>
 										<li>
 											<i class="icofont icofont-document-folder"></i>
 										</li>
 										<li class="text-right">
-											133
+											<?php echo $status->Pagada; ?>
 										</li>
 									</ul>
 								</div>
@@ -40,13 +41,13 @@
 						<div class="col-md-6 col-xl-3">
 							<div class="card client-blocks warning-border">
 								<div class="card-body">
-									<h5>New Clients</h5>
+									<h5>Parcial</h5>
 									<ul>
 										<li>
-											<i class="icofont icofont-ui-user-group text-warning"></i>
+											<i class="icofont icofont-document-folder text-warning"></i>
 										</li>
 										<li class="text-right text-warning">
-											23
+										<?php echo $status->Parcial; ?>
 										</li>
 									</ul>
 								</div>
@@ -57,13 +58,13 @@
 						<div class="col-md-6 col-xl-3">
 							<div class="card client-blocks success-border">
 								<div class="card-body">
-									<h5>New Files</h5>
+									<h5>Borrador</h5>
 									<ul>
 										<li>
-											<i class="icofont icofont-files text-success"></i>
+											<i class="icofont icofont-document-folder text-success"></i>
 										</li>
 										<li class="text-right text-success">
-											240
+										<?php echo $status->Borrador; ?>
 										</li>
 									</ul>
 								</div>
@@ -74,13 +75,13 @@
 						<div class="col-md-6 col-xl-3">
 							<div class="card client-blocks">
 								<div class="card-body">
-									<h5>Open Projects</h5>
+									<h5>No Pagada</h5>
 									<ul>
 										<li>
-											<i class="icofont icofont-ui-folder text-primary"></i>
+											<i class="icofont icofont-document-folder text-primary"></i>
 										</li>
 										<li class="text-right text-primary">
-											169
+										<?php echo $status->No_Pagada; ?>
 										</li>
 									</ul>
 								</div>
@@ -88,7 +89,7 @@
 						</div>
 
 
-						<div class="col-md-12 col-xl-8">
+						<div class="col-md-12 col-xl-12">
 							<div class="card">
 								<div class="card-header">
 									<button class="btn btn-primary btn-sm">Week</button>
@@ -102,7 +103,7 @@
 						</div>
 
 
-						<div class="col-md-12 col-xl-4">
+						<!-- <div class="col-md-12 col-xl-4">
 							<div class="card">
 								<div class="card-header">
 									<h5>Create Your Daily Task</h5>
@@ -112,8 +113,8 @@
 									<div class="input-group input-group-button">
 										<input type="text" class="form-control add_task_todo" placeholder="Create your task list" name="task-insert">
 										<span class="input-group-addon" id="basic-addon1">
-<button id="add-btn" class="btn btn-primary">Add Task</button>
-</span>
+											<button id="add-btn" class="btn btn-primary">Add Task</button>
+										</span>
 									</div>
 									<div class="new-task">
 										<div class="to-do-list">
@@ -121,8 +122,8 @@
 												<label class="check-task">
 													<input type="checkbox" value="">
 													<span class="cr">
-<i class="cr-icon icofont icofont-ui-check txt-primary"></i>
-</span>
+														<i class="cr-icon icofont icofont-ui-check txt-primary"></i>
+													</span>
 													<span>Hey.. Attach your new file</span>
 												</label>
 											</div>
@@ -135,8 +136,8 @@
 												<label class="check-task">
 													<input type="checkbox" value="">
 													<span class="cr">
-<i class="cr-icon icofont icofont-ui-check txt-primary"></i>
-</span>
+														<i class="cr-icon icofont icofont-ui-check txt-primary"></i>
+													</span>
 													<span>New Attachment has error</span>
 												</label>
 											</div>
@@ -149,8 +150,8 @@
 												<label class="check-task">
 													<input type="checkbox" value="">
 													<span class="cr">
-<i class="cr-icon icofont icofont-ui-check txt-primary"></i>
-</span>
+														<i class="cr-icon icofont icofont-ui-check txt-primary"></i>
+													</span>
 													<span>Have to submit early</span>
 												</label>
 											</div>
@@ -163,8 +164,8 @@
 												<label class="check-task">
 													<input type="checkbox" value="">
 													<span class="cr">
-<i class="cr-icon icofont icofont-ui-check txt-primary"></i>
-</span>
+														<i class="cr-icon icofont icofont-ui-check txt-primary"></i>
+													</span>
 													<span>10 pages has to be completed</span>
 												</label>
 											</div>
@@ -177,8 +178,8 @@
 												<label class="check-task">
 													<input type="checkbox" value="">
 													<span class="cr">
-<i class="cr-icon icofont icofont-ui-check txt-primary"></i>
-</span>
+														<i class="cr-icon icofont icofont-ui-check txt-primary"></i>
+													</span>
 													<span>Navigation working</span>
 												</label>
 											</div>
@@ -191,8 +192,8 @@
 												<label class="check-task">
 													<input type="checkbox" value="">
 													<span class="cr">
-<i class="cr-icon icofont icofont-ui-check txt-primary"></i>
-</span>
+														<i class="cr-icon icofont icofont-ui-check txt-primary"></i>
+													</span>
 													<span>Files submited successfully</span>
 												</label>
 											</div>
@@ -217,9 +218,9 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 
-						<div class="col-md-12 col-xl-4">
+						<!-- <div class="col-md-12 col-xl-4">
 							<div class="card widget-chat-box">
 								<div class="card-header">
 									<div class="row">
@@ -265,7 +266,7 @@
 									<input type="text" class="form-control" placeholder="Your Message">
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>

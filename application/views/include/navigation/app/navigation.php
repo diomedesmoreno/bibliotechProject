@@ -62,7 +62,7 @@
 			<li class="pcoded-hasmenu <?php echo $incomes_active;?>">
 				<a href="javascript:void(0)">
 					<span class="pcoded-micon"><i class="ti-wallet"></i></span>
-					<span class="pcoded-mtext" data-i18n="nav.dash.main">Ingresos</span>
+					<span class="pcoded-mtext" data-i18n="nav.dash.main">Penalidades</span>
 					<span class="pcoded-mcaret"></span>
 				</a>
 				<ul class="pcoded-submenu">
@@ -70,22 +70,22 @@
 					<li class="<?php echo $invoices_active;?>">
 						<a href="<?php echo base_url('invoices');?>">
 							<span class="pcoded-micon"><i class="ti-user"></i></span>
-							<span class="pcoded-mtext">Facturas</span>
+							<span class="pcoded-mtext">Generar multas</span>
 							<span class="pcoded-mcaret"></span>
 						</a>
 					</li>
 					<?php $receipt_income_active = ($this->router->fetch_class() == "receipt_income") ? "active" : "";?>
-					<li class="<?php echo $receipt_income_active;?>">
+					<!-- <li class="<?php echo $receipt_income_active;?>">
 						<a href="<?php echo base_url('receipt_income');?>">
 							<span class="pcoded-micon"><i class="ti-user"></i></span>
 							<span class="pcoded-mtext">Recibo de Ingresos</span>
 							<span class="pcoded-mcaret"></span>
 						</a>
-					</li>
+					</li> -->
 				</ul>
 			</li>
 			<?php $expenses_active = ($this->router->fetch_class() == "expenses" || $this->router->fetch_class() == "payments") ? "active ".$menu_toggle : "";?>
-			<li class="pcoded-hasmenu <?php echo $expenses_active;?>">
+			<!-- <li class="pcoded-hasmenu <?php echo $expenses_active;?>">
 				<a href="javascript:void(0)">
 					<span class="pcoded-micon"><i class="icon-wallet"></i></span>
 					<span class="pcoded-mtext" data-i18n="nav.dash.main">Gastos</span>
@@ -109,7 +109,7 @@
 						</a>
 					</li>
 				</ul>
-			</li>
+			</li> -->
 		</ul>
 
 		<div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation" menu-title-theme="theme5">Administrativo</div>
@@ -160,34 +160,34 @@
 					<li class="<?php echo $invoice_list_active;?>">
 						<a href="<?php echo base_url('reports/invoice_list');?>">
 							<span class="pcoded-micon"><i class="ti-user"></i></span>
-							<span class="pcoded-mtext">Lista de Facturas</span>
+							<span class="pcoded-mtext">Lista de multas</span>
 							<span class="pcoded-mcaret"></span>
 						</a>
 					</li>
 					<?php $income_total_list_active = ($this->uri->segment(2) == "income_total_list") ? "active" : "";?>
-					<li class="<?php echo $income_total_list_active;?>">
+					<!-- <li class="<?php echo $income_total_list_active;?>">
 						<a href="<?php echo base_url('reports/income_total_list');?>">
 							<span class="pcoded-micon"><i class="ti-user"></i></span>
 							<span class="pcoded-mtext">Total de Ingresos</span>
 							<span class="pcoded-mcaret"></span>
 						</a>
-					</li>
+					</li> -->
 					<?php $expense_list_active = ($this->uri->segment(2) == "expense_list") ? "active" : "";?>
-					<li class="<?php echo $expense_list_active;?>">
+					<!-- <li class="<?php echo $expense_list_active;?>">
 						<a href="<?php echo base_url('reports/expense_list');?>">
 							<span class="pcoded-micon"><i class="ti-user"></i></span>
 							<span class="pcoded-mtext">Lista de Gastos</span>
 							<span class="pcoded-mcaret"></span>
 						</a>
-					</li>
+					</li> -->
 					<?php $payments_total_list_active = ($this->uri->segment(2) == "payments_total_list") ? "active" : "";?>
-					<li class="<?php echo $payments_total_list_active;?>">
+					<!-- <li class="<?php echo $payments_total_list_active;?>">
 						<a href="<?php echo base_url('reports/payments_total_list');?>">
 							<span class="pcoded-micon"><i class="ti-user"></i></span>
 							<span class="pcoded-mtext">Total de Pagos</span>
 							<span class="pcoded-mcaret"></span>
 						</a>
-					</li>
+					</li> -->
 					<?php $inventory_list_active = ($this->uri->segment(2) == "inventory_list") ? "active" : "";?>
 					<li class="<?php echo $inventory_list_active;?>">
 						<a href="<?php echo base_url('reports/inventory_list');?>">

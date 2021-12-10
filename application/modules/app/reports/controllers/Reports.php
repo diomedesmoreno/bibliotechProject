@@ -10,6 +10,11 @@ class Reports extends APP_Controller
 		$this->moduleId		= 12;
 
 		$this->load->model('reports/reports_model');
+		$this->load->model('invoices/invoices_model');
+		// $this->load->model('invoices/invoices_items_model');
+		// $this->load->model('invoices/invoices_status_model');
+		// $this->load->model('inventory/inventory_model');
+		// $this->load->model('inventory/inventory_entry_model');
 	}
 
 	public function index()
@@ -44,8 +49,9 @@ class Reports extends APP_Controller
 	public function invoice_list()
 	{
 		$this->title			= "Lista de Facturas";
-		$data                   = array();
+		$data['status']         = $this->invoices_model->get_amount_status($this->schoolId);
 		$data['content']		= 'reports/invoice_list_view';
+		// print_d($data['status']$status->Borrador;);
 		$this->load->view('include/template', $data);
 	}
 

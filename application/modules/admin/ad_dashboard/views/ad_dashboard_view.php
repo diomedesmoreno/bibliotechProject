@@ -219,7 +219,7 @@
 							</div>
 						</div>
 
-						<div class="col-md-12 col-xl-4">
+						<!-- <div class="col-md-12 col-xl-4">
 							<div class="card widget-chat-box">
 								<div class="card-header">
 									<div class="row">
@@ -265,7 +265,7 @@
 									<input type="text" class="form-control" placeholder="Your Message">
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>

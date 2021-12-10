@@ -57,7 +57,7 @@ $route['translate_uri_dashes'] 			= FALSE;
 $route['login']							= 'session/index';
 $route['login/(.*)']            		= 'session/index/$1';
 $route['logout']						= 'session/logout';
-$route['register/(.*)']					= 'register/index/$1';
+// $route['register/(.*)']					= 'register/index/$1';
 
 
 /*Admin Section*/

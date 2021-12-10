@@ -20,8 +20,6 @@ class Securities
 				echo json_encode(array('result' => 0, 'is_logged_in' => false, 'redirect' => $redirect));
 				exit();
 			}
-			var_dump($is_logged_in,' vamos al juego',$redirect );
-			die();
 			redirect(base_url().'login/'.$redirect, 'refresh');
 		}
 	}
@@ -32,8 +30,6 @@ class Securities
 		{
 			$redirect = $this->CI->uri->segment(1);
 			
-			var_dump($is_logged_in,' vamos al juego 2.0',$redirect);
-			die();
 			if($this->CI->input->is_ajax_request())
 			{
 				echo json_encode(array('result' => 0, 'is_ad_logged_in' => false, 'redirect' => $redirect));
