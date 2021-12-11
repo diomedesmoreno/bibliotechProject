@@ -29,7 +29,7 @@
 					<h2 class="title">Recuperar Contraseña</h2>
 					<div class="description">Introduce tu dominio y email para enviarte un correo con las instrucciones para recuperarla.</div>
 					<div class="response"></div>
-					<div class="input-div one">
+					<!-- <div class="input-div one">
 						<div class="i">
 							<i class="fas fa-home"></i>
 						</div>
@@ -38,7 +38,7 @@
 							<input type="text" name="domain" class="input" data-field="domain">
 							<span class="valid-message"></span>
 						</div>
-					</div>
+					</div> -->
 					<div class="input-div one">
 						<div class="i">
 							<i class="fas fa-user"></i>

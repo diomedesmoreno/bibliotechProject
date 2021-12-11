@@ -30,7 +30,7 @@
 					<input type="hidden" name="redirect" id="redirect" value="<?php echo $redirect;?>">
 					<h2 class="title">Iniciar Sesión</h2>
 					<div class="response"></div>
-					<div class="input-div one">
+					<!-- <div class="input-div one">
 						<div class="i">
 							<i class="fas fa-home"></i>
 						</div>
@@ -39,7 +39,7 @@
 							<input type="text" name="domain" class="input" data-field="domain">
 							<span class="valid-message"></span>
 						</div>
-					</div>
+					</div> -->
 					<div class="input-div one">
 						<div class="i">
 							<i class="fas fa-user"></i>

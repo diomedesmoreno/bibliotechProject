@@ -15,4 +15,9 @@ class Invoices_model extends MY_Model
 
 		return $result[0];
     }
+
+    public function get_amount_status($schoolId){
+        $result = $this->db->query("SELECT  (SELECT count(*) from ai_invoices where statusId = 1 AND hidden = 0 AND schoolId = $schoolId) as 'Borrador', (SELECT count(*) from ai_invoices where statusId = 2 AND hidden = 0 AND schoolId = $schoolId) as 'No_Pagada', (SELECT count(*) from ai_invoices where statusId = 3 AND hidden = 0 AND schoolId = $schoolId) as 'Parcial', (SELECT count(*) from ai_invoices where statusId = 4 AND hidden = 0 AND schoolId = $schoolId) as 'Pagada', (SELECT count(*) from ai_invoices where statusId = 5 AND hidden = 0 AND schoolId = $schoolId) as 'Anulada' FROM ai_invoices as a LIMIT 1;")->result();
+		return $result[0];
+    }
 }

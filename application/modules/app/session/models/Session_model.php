@@ -10,11 +10,11 @@ class Session_model extends MY_Model
         $this->order_by     = "userId DESC";
     }
 
-    public function validate_user($domain, $email)
+    public function validate_user($email)
     {
         return $this->db->query("SELECT COUNT(a.userId) AS users FROM ai_users AS a 
 								LEFT JOIN ai_schools AS b ON b.schoolId = a.schoolId
-								WHERE a.email = '$email' AND b.domain = '$domain' AND a.hidden = 0")->row()->users;
+								WHERE a.email = '$email' AND a.hidden = 0")->row()->users;
     }
 
     public function get_name($email)

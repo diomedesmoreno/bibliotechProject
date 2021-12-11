@@ -8,10 +8,10 @@ class Com_auth extends MY_Controller
         $this->load->model('com_auth/com_auth_model');
     }
 
-    public function auth($domain, $email, $password)
+    public function auth($email, $password)
     {
         $password =  md5($password);
-        $row      = $this->com_auth_model->auth($domain, $email, $password);
+        $row      = $this->com_auth_model->auth($email, $password);
 
         if($row)
         {

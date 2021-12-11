@@ -176,6 +176,10 @@ if( ! function_exists('display_js_files'))
 
 			case "reports":
 				$files .= '<script src="'.base_url().'assets/js/modules/reports.js"></script>';
+				$files .= '<script type="text/javascript" src="'.base_url().'assets/template/app/bower_components/morris.js/morris.js"></script>';
+				$files .= '<script type="text/javascript" src="'.base_url().'assets\template\app\default\assets\pages\report\project-project-income.js"></script>';
+				$files .= '<script type="text/javascript" src="'.base_url().'assets\template\app\default\assets\pages\report\project-inventory.js"></script>';
+				$files .= '<script src="'.base_url().'assets/js/modules/dashboard.js"></script>';
 				break;
 
 			case "school":

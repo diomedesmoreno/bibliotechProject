@@ -10,13 +10,13 @@ class Com_auth_model extends MY_Model
         $this->order_by     = "userId DESC";
     }
 
-    public function auth($domain, $email, $password)
+    public function auth($email, $password)
     {
         return $this->db->query("SELECT a.schoolId, a.name AS school_name, a.planId, a.countryId, a.initial_settings, a.expiracy_date, b.userId, b.username, b.first_name, b.last_name, b.email, b.image, b.statusId, b.typeId, b.owner, c.user_qty
 								FROM ai_schools AS a 
 								LEFT JOIN ai_users AS b ON b.schoolId = a.schoolId 
 								LEFT JOIN ai_plans AS c ON c.planId = a.planId
-								WHERE a.domain = '$domain' AND b.username = '$email' AND b.password = '$password' AND b.hidden = 0 AND b.statusId = 1")->row();
+								WHERE b.username = '$email' AND b.password = '$password' AND b.hidden = 0 AND b.statusId = 1")->row();
     }
 
     public function get_settings_data($schoolId)

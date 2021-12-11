@@ -15,12 +15,7 @@ class Session extends MY_Controller
 		$this->redirect_if_logged_in($this->session->userdata('app')['userdata']['is_logged_in']);
 		$data                   = array();
 		$data['redirect']       = ($redirect == FALSE) ? "" : $redirect;
-		if ($this->session->userdata('app')['userdata']['schoolId']  == 1){
-			// var_dump(' vamos al juego 4.0',$this->session->userdata('app')['userdata'] );
-			// die();
-		}
 		$this->load->view('session/session_view', $data);
-		// 
 	}
 
 	public function js_session()
@@ -29,13 +24,13 @@ class Session extends MY_Controller
 		echo $this->com_auth->js_session();
 	}
 
-	public function auth($domain  = FALSE, $username  = FALSE, $password  = FALSE)
+	public function auth($username  = FALSE, $password  = FALSE)
 	{
-		$domain   	= ($domain == FALSE) ? $this->input->post('domain') : $domain;
+		// $domain   	= ($domain == FALSE) ? $this->input->post('domain') : $domain;
 		$username   = ($username == FALSE) ? $this->input->post('username') : $username;
 		$password   = ($password == FALSE) ? $this->input->post('password') : $password;
 		$redirect   = (empty($_POST['redirect'])) ? 'dashboard' : $this->input->post('redirect');
-		$row        = $this->com_auth->auth($domain, $username, $password);
+		$row        = $this->com_auth->auth($username, $password);
 
 		if($row[0] == TRUE)
 		{
@@ -44,7 +39,7 @@ class Session extends MY_Controller
 		}
 		else
 		{
-			echo json_encode(array('result' => 0, 'error' => display_error("<li>La combinación Dominio / Usuario / Contraseña es incorrecta.</li>", TRUE)));
+			echo json_encode(array('result' => 0, 'error' => display_error("<li>La combinación Usuario / Contraseña es incorrecta.</li>", TRUE)));
 		}
 	}
 
@@ -58,7 +53,7 @@ class Session extends MY_Controller
 	public function recover_password()
 	{
 		$this->form_validation->set_rules('email', '<strong>Email</strong>', 'trim|required|valid_email');
-		$this->form_validation->set_rules('domain', '<strong>Dominio</strong>', 'trim|required');
+		// $this->form_validation->set_rules('domain', '<strong>Dominio</strong>', 'trim|required');
 
 		if($this->form_validation->run() == FALSE)
 		{
@@ -66,10 +61,10 @@ class Session extends MY_Controller
 		}
 		else
 		{
-			$domain     = $this->input->post("domain");
+			// $domain     = $this->input->post("domain");
 			$email      = $this->input->post("email");
 
-			$validate   = $this->session_model->validate_user($domain, $email);
+			$validate   = $this->session_model->validate_user($email);
 
 			if($validate == 0)
 			{
@@ -171,8 +166,6 @@ class Session extends MY_Controller
 
 	private function redirect_if_logged_in($is_logged_in)
 	{
-		// var_dump(' vamos al juego 4.0',$is_logged_in );
-		// 	die();
 		if(isset($is_logged_in) || ($is_logged_in === TRUE))
 		{
 			$redirect = "dashboard";
