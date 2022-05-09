@@ -104,7 +104,7 @@ class CI_Config {
 			}
 			else
 			{
-				$base_url = 'https://schoolapp-inf.herokuapp.com/';
+				$base_url = 'http://localhost/final/';
 				// $base_url = 'http://localhost/';
 				// $base_url = 'http://localhost:8080/practicas/codeigniter/pruebaCodelgniter/bibliotechProject/';
 			}
