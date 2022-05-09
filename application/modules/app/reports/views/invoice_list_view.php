@@ -4,7 +4,7 @@
 			<div class="page-wrapper">
 				<div class="page-header row">
 					<div class="page-header-title">
-						<h4>Lista de Facturas</h4>
+						<h4>Lista de Multas</h4>
 						<div >
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item">
@@ -14,7 +14,7 @@
 								</li>
 								<!-- <li class="breadcrumb-item"><a href="javascript:void(0);">Generales</a></li> -->
 								<li class="breadcrumb-item active"><a href="javascript:void(0);">Reportes</a></li>
-								<li class="breadcrumb-item active"><a href="javascript:void(0);">Lista de Facturas</a></li>
+								<li class="breadcrumb-item active"><a href="javascript:void(0);">Lista de Multas</a></li>
 							</ul>
 						</div>
 					</div>

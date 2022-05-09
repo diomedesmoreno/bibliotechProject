@@ -47,7 +47,7 @@ class Initial_settings extends MY_Controller
 	public function save_initial_settings()
 	{
 		$this->form_validation->set_rules('school_name', '<strong>Nombre</strong>', 'trim|required');
-		$this->form_validation->set_rules('domain', '<strong>Dominio</strong>', 'trim|required');
+		// $this->form_validation->set_rules('domain', '<strong>Dominio</strong>', 'trim|required');
 		$this->form_validation->set_rules('username', '<strong>Username</strong>', 'trim|required');
 
 		if($this->form_validation->run($this) == FALSE)

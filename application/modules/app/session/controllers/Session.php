@@ -82,7 +82,7 @@ class Session extends MY_Controller
 				$result = $this->sendmail->send_mail(array(
 					'to'       => $email,
 					'to_name'  => $name,
-					'title'    => 'SchoolApp | Recuperar Contraseña',
+					'title'    => 'Library Management | Recuperar Contraseña',
 					'body'     => $html), TRUE);
 
 				if($result == TRUE)

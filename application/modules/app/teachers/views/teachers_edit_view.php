@@ -8,7 +8,7 @@
 						<div>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="javascript:void(0);">Generales</a></li>
-								<li class="breadcrumb-item"><a href="javascript:void(0);">Personal</a></li>
+								<li class="breadcrumb-item"><a href="javascript:void(0);">Usuarios</a></li>
 								<li class="breadcrumb-item active"><a href="<?php echo base_url('teachers');?>">Docentes</a></li>
 							</ul>
 						</div>

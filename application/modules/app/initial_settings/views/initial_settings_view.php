@@ -68,7 +68,7 @@
                   					  <img src="assets/template/initial_settings/assets/images/institute.svg" alt="branding" class="label-icon-default">
                   					  <img src="assets/template/initial_settings/assets/images/institute-color.svg" alt="branding" class="label-icon-active">
                   					</span>
-									<span class="label-text">Instituto</span>
+									<span class="label-text">Otra Institución</span>
 								</label>
 							</div>
 						</div>

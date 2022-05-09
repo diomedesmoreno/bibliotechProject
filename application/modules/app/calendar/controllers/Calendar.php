@@ -117,7 +117,13 @@ class Calendar extends APP_Controller
 		// print_d($data['row'] );
 		// echo json_encode($result);
 		// echo json_encode(array('content' => $this->load->view('calendar/calendar_event_edit_view', $data, true)));
-		$this->load->view('include/template', $data);
+		// $this->load->view('include/template', $data);
+		$data 					= array();
+		$data['current_date'] 	= ($date == FALSE) ? date("Y-m-d") : $date;
+		$data['employees']		= $this->employees_model->get_assoc_list(array('employeeId AS id', 'CONCAT(first_name," ", last_name) AS name'), array("schoolId" => $this->schoolId, "hidden" => 0));
+		$data['parents']		= $this->parents_model->get_assoc_list(array('parentId AS id', 'CONCAT(first_name," ", last_name) AS name'), array("schoolId" => $this->schoolId, "hidden" => 0));
+		$data['teachers']		= $this->teachers_model->get_assoc_list(array('teacherId AS id', 'CONCAT(first_name," ", last_name) AS name'), array("schoolId" => $this->schoolId, "hidden" => 0));
+		echo ($day_click == FALSE) ? json_encode(array('result' => 1, 'view' => $this->load->view('calendar/add_event_view', $data, TRUE))) : json_encode(array('result' => $this->load->view('calendar/add_event_view', $data, TRUE)));
 	}
 
 	public function update_event($eventId)

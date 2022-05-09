@@ -15,7 +15,7 @@
 			<li class="pcoded-hasmenu <?php echo $personal_active;?>">
 				<a href="javascript:void(0)">
 					<span class="pcoded-micon"><i class="icon-people"></i></span>
-					<span class="pcoded-mtext" data-i18n="nav.dash.main">Personal</span>
+					<span class="pcoded-mtext" data-i18n="nav.dash.main">Usuarios</span>
 					<span class="pcoded-mcaret"></span>
 				</a>
 				<ul class="pcoded-submenu">
@@ -41,7 +41,39 @@
 			<li class="<?php echo $calendar_active;?>">
 				<a href="<?php echo base_url('calendar');?>">
 					<span class="pcoded-micon"><i class="ti-calendar"></i></span>
-					<span class="pcoded-mtext">Calendario</span>
+					<span class="pcoded-mtext">Calendarios</span>
+					<span class="pcoded-mcaret"></span>
+				</a>
+			</li>
+			<?php $books_active = ($this->router->fetch_class() == "books") ? "active" : "";?>
+			<li class="<?php echo $books_active;?>">
+				<a href="<?php echo base_url('books');?>">
+					<span class="pcoded-micon"><i class="ti-package"></i></span>
+					<span class="pcoded-mtext">Libros</span>
+					<span class="pcoded-mcaret"></span>
+				</a>
+			</li>
+			<?php $editorial_active = ($this->router->fetch_class() == "editorial") ? "active" : "";?>
+			<li class="<?php echo $editorial_active;?>">
+				<a href="<?php echo base_url('editorial');?>">
+					<span class="pcoded-micon"><i class="ti-package"></i></span>
+					<span class="pcoded-mtext">Editorial</span>
+					<span class="pcoded-mcaret"></span>
+				</a>
+			</li>
+			<?php $loans_active = ($this->router->fetch_class() == "loans") ? "active" : "";?>
+			<li class="<?php echo $loans_active;?>">
+				<a href="<?php echo base_url('loans');?>">
+					<span class="pcoded-micon"><i class="ti-package"></i></span>
+					<span class="pcoded-mtext">Prestamos</span>
+					<span class="pcoded-mcaret"></span>
+				</a>
+			</li>
+			<?php $returns_active = ($this->router->fetch_class() == "returns") ? "active" : "";?>
+			<li class="<?php echo $returns_active;?>">
+				<a href="<?php echo base_url('returns');?>">
+					<span class="pcoded-micon"><i class="ti-package"></i></span>
+					<span class="pcoded-mtext">Devoluciones</span>
 					<span class="pcoded-mcaret"></span>
 				</a>
 			</li>
@@ -109,7 +141,7 @@
 			<li class="pcoded-hasmenu <?php echo $personal_active;?>">
 				<a href="javascript:void(0)">
 					<span class="pcoded-micon"><i class="icon-people"></i></span>
-					<span class="pcoded-mtext" data-i18n="nav.dash.main">Personal</span>
+					<span class="pcoded-mtext" data-i18n="nav.dash.main">Usuarios</span>
 					<span class="pcoded-mcaret"></span>
 				</a>
 				<ul class="pcoded-submenu">

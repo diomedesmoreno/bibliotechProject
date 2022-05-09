@@ -87,7 +87,7 @@ class Register extends MY_Controller
 
 				if($this->users_model->save($user_data))
 				{
-					$this->com_auth->auth($school_domain, $email, $password);
+					$this->com_auth->auth($email, $password);
 					echo json_encode(array("result" => 1, 'url' => base_url('initial_settings')));
 				}
 			}

@@ -58,15 +58,15 @@
 
                         <div class="col-md-6 col-xl-3">
                             <div class="card client-blocks success-border">
-                                <a href="<?php echo base_url('employees');?>">
+                                <a href="<?php echo base_url('books');?>">
                                     <div class="card-body">
-                                        <h5>Empleados</h5>
+                                        <h5>Libros en inventarios</h5>
                                         <ul>
                                             <li>
                                                 <i class="ti-user text-success"></i>
                                             </li>
                                             <li class="text-right text-success">
-                                                <?php echo $header_data['employees'];?>
+                                                <?php echo $header_data['books'] != 0? $header_data['books']: 0;?>
                                             </li>
                                         </ul>
                                     </div>
@@ -76,15 +76,15 @@
 
                         <div class="col-md-6 col-xl-3">
                             <div class="card client-blocks">
-                                <a href="<?php echo base_url('inventory');?>">
+                                <a href="<?php echo base_url('loans');?>">
                                     <div class="card-body">
-                                        <h5>Inventario</h5>
+                                        <h5>Libros prestados</h5>
                                         <ul>
                                             <li>
                                                 <i class="ti-package text-primary"></i>
                                             </li>
                                             <li class="text-right text-primary">
-                                                <?php echo $header_data['inventory'];?>
+                                                <?php echo $header_data['books_loans'] != 0? $header_data['books_loans']: 0;?>
                                             </li>
                                         </ul>
                                     </div>

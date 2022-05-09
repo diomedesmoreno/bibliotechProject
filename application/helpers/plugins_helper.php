@@ -209,6 +209,37 @@ if( ! function_exists('display_js_files'))
 			case "general_settings":
 				$files .= '<script src="'.base_url().'assets/js/modules/general_settings.js"></script>';
 				break;
+				case "reports":
+					$files .= '<script src="'.base_url().'assets/js/modules/reports.js"></script>';
+					break;
+	
+				case "students":
+					$files .= '<script src="'.base_url().'assets/js/modules/students.js"></script>';
+					break;
+	
+				case "teachers":
+					$files .= '<script src="'.base_url().'assets/js/modules/teachers.js"></script>';
+					break;
+	
+				case "books":
+					$files .= '<script src="'.base_url().'assets/js/modules/books.js"></script>';
+					break;
+	
+				case "loans":
+					$files .= '<script src="'.base_url().'assets/js/modules/loans.js"></script>';
+					break;
+	
+				case "editorial":
+					$files .= '<script src="'.base_url().'assets/js/modules/editorial.js"></script>';
+					break;
+	
+				case "returns":
+					$files .= '<script src="'.base_url().'assets/js/modules/returns.js"></script>';
+					break;
+	
+				case "users":
+					$files .= '<script src="'.base_url().'assets/js/modules/users.js"></script>';
+					break;
         }
 
         return $files;

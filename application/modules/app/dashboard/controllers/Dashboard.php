@@ -12,10 +12,14 @@ class Dashboard extends APP_Controller
 		$this->load->model('teachers/teachers_model');
 		$this->load->model('inventory/inventory_model');
 		$this->load->model('employees/employees_model');
+		$this->load->model('books/books_model');
+		$this->load->model('loans/loans_model');
+		$this->load->model('loans/loans_items_model');
 	}
 
 	public function index()
 	{
+		// print_d($this->load_header_data());
 		$data                   = array();
 		$data['header_data']	= $this->load_header_data();
 		$data['content']		= 'dashboard/dashboard_view';
@@ -27,8 +31,10 @@ class Dashboard extends APP_Controller
 		return array(
 			'students'  => $this->students_model->count_by(array("schoolId" => $this->schoolId, "hidden" => 0)),
 			'teachers'  => $this->teachers_model->count_by(array("schoolId" => $this->schoolId, "hidden" => 0)),
-			'employees' => $this->employees_model->count_by(array("schoolId" => $this->schoolId, "hidden" => 0)),
-			'inventory' => $this->inventory_model->count_by(array("schoolId" => $this->schoolId, "hidden" => 0, 'typeId' => 1, 'belongs_to_student' => 0))
+			'books' => $this->books_model->get_all_sum_book(),
+			'books_loans' => $this->loans_items_model->get_all_sum_items()
+			// 'employees' => $this->employees_model->count_by(array("schoolId" => $this->schoolId, "hidden" => 0)),
+			// 'inventory' => $this->inventory_model->count_by(array("schoolId" => $this->schoolId, "hidden" => 0, 'typeId' => 1, 'belongs_to_student' => 0))
 		);
 	}
 }

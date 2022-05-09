@@ -18,11 +18,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<img class="wave" src="<?php echo base_url();?>assets/template/session/img/wave.png">
+<!-- <img class="wave" src="<?php echo base_url();?>assets/template/session/img/wave.png"> -->
 <div class="container">
 	<div class="container-items">
 		<div class="img">
-			<img src="<?php echo base_url();?>assets/template/session/img/bg.svg">
+			<img src="<?php echo base_url();?>assets/template/session/img/bg_new.jpeg">
+			<!-- <img src="<?php echo base_url();?>assets/template/session/img/bg.svg"> -->
 		</div>
 		<div class="login-content">
 			<div class="container-form">
@@ -71,7 +72,7 @@
 		</div>
 	</div>
 	<div class="footer">
-		<p>SchoolApp &copy; <?php echo date("Y");?> <a href="<?php echo base_url();?>">T&eacute;rminos de Uso</a> & <a href="<?php echo base_url();?>">Pol&iacute;ticas de Privacidad</a></p>
+		<p>Library Management &copy; <?php echo date("Y");?> <a href="<?php echo base_url();?>">T&eacute;rminos de Uso</a> & <a href="<?php echo base_url();?>">Pol&iacute;ticas de Privacidad</a></p>
 	</div>
 </div>
 

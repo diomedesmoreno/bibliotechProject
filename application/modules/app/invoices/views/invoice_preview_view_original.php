@@ -21,7 +21,9 @@
 							<table class="table table-responsive invoice-table table-borderless">
 								<tbody>
 								<tr>
-									<td><img src="<?php echo base_url();?>assets/template/app/default/assets/images/logo-blue.png" class="m-b-10" alt=""></td>
+									<td>
+										<img src="<?php echo base_url();?>assets/template/app/default/assets/images/inventory-img.png" class="m-b-10" alt="">
+									</td>
 								</tr>
 								<tr>
 									<td>Bibliotech</td>

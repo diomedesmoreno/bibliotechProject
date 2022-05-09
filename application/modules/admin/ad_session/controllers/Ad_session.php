@@ -79,7 +79,7 @@ class Ad_session extends MY_Controller
 				$this->sendmail->send_mail(array(
 					'to'       => $email,
 					'to_name'  => $name,
-					'title'    => 'SchoolApp | Recuperar Contraseña',
+					'title'    => 'Library Management | Recuperar Contraseña',
 					'body'     => $html), TRUE);
 
 				$hash1 = array("hash" => $hash);

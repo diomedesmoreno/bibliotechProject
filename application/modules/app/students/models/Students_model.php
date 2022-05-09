@@ -18,8 +18,8 @@ class Students_model extends MY_Model
 
 		foreach ($result AS $row)
 		{
-			$option[$row->studentId]['id'] = $row->studentId;
-			$option[$row->studentId]['name'] = $row->first_name.' '.$row->last_name;
+			$option[$row->studentId] = $row->studentId;
+			$option[$row->studentId] = $row->first_name.' '.$row->last_name;
 		}
 
 		return $option;

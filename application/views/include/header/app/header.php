@@ -46,7 +46,7 @@
 					</a>
 					<a href="<?php echo base_url('dashboard');?>">
 <!--						<img class="img-fluid" src="--><?php //echo base_url();?><!--assets/template/app/default/assets/images/schoolapp.png" alt="Theme-Logo" />-->
-						<img class="img-fluid" src="<?php echo base_url();?>assets/template/app/default/assets/images/logo.png" alt="Theme-Logo" />
+						<img class="img-fluid" src="<?php echo base_url();?>assets/template/app/default/assets/images/logo3.png" alt="Theme-Logo" />
 					</a>
 					<a class="mobile-options">
 						<i class="ti-more"></i>
